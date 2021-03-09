@@ -10,4 +10,7 @@ RUN mkdir /.cache/yarn
 
 RUN chmod -R 777 /.yarn
 RUN chmod -R 777 /.cache
+RUN chmod -R 777 /var/app/node_modules
+
 ENTRYPOINT ["yarn", "start"]
+
