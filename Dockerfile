@@ -5,5 +5,9 @@ COPY package.json ./
 RUN yarn
 COPY . ./
 RUN mkdir /.yarn
+RUN mkdir /.cache
+RUN mkdir /.cache/yarn
+
 RUN chmod -R 777 /.yarn
+RUN chmod -R 777 /.cache
 ENTRYPOINT ["yarn", "start"]
